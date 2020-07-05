@@ -34,14 +34,14 @@ def main():
     
     # Load Hindi stopwords
     
-    f=codecs.open("/Users/kush/Downloads/Hindi emotion detection/hindi_stopwords.txt",encoding='utf-8')
+    f=codecs.open("hindi_stopwords.txt",encoding='utf-8')
     stopwords=[x.strip() for x in f.readlines()]
     
     # Load dataset
     
     @st.cache(allow_output_mutation=True)
     def load_dataset():
-        df = pd.read_csv('/Users/kush/Downloads/Hindi emotion detection/DataCSV/emotion.csv',encoding='utf-8')
+        df = pd.read_csv('DataCSV/emotion.csv',encoding='utf-8')
         return df
     
         pass
@@ -203,7 +203,7 @@ def main():
                 
     # Train pre-trained model 
     else:
-        model = pickle.load(open('/Users/kush/Downloads/Hindi emotion detection/hindi_model.pkl','rb'))
+        model = pickle.load(open('hindi_model.pkl','rb'))
         df = load_dataset()
         X_train, X_test, y_train, y_test,cv  = count_vect(df)
         accuracy = model.score(X_test,y_test)
