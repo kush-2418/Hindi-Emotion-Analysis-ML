@@ -43,6 +43,7 @@ Fiona==1.8.13.post1
 flake8==3.7.9
 future==0.18.2
 geopandas==0.7.0
+googletrans==3.0.0
 idna==2.9
 imagesize==1.2.0
 importlib-metadata==1.6.1
@@ -154,6 +155,8 @@ traitlets==4.3.3
 tweepy==3.8.0
 tzlocal==2.1
 ujson==1.35
+unicode==2.7
+Unidecode==1.1.1
 urllib3==1.25.9
 validators==0.15.0
 wasabi==0.6.0
